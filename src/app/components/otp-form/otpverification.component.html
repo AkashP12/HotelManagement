@@ -1,0 +1,26 @@
+<div id="wrapper">
+    <div id="dialog">
+        <h4>Please enter the 6-digit verification code we sent via SMS:</h4>
+        <form #myform="ngForm" (ngSubmit)="authComplete()" id="form">
+            <input type="text" minlength="6" maxlength="6" ngModel pattern="[0-9]{6}" placeholder="Enter six digit OTP" required [(ngModel)]="otp" name="otp" #otpverify="ngModel" [class.is-invalid]="otpverify.invalid && otpverify.touched" />
+            <div *ngIf="
+              otpverify.errors &&
+              otpverify.invalid &&
+              otpverify.touched
+            ">
+                <small class="text-danger" *ngIf="otpverify.errors.required">OTP number is required field</small
+            >
+            <small class="text-danger" *ngIf="otpverify.errors.minlength"
+              >Enter valid otp Number</small
+            >
+          </div>
+        
+            <button class="btn btn-success otpBtn" type="submit">Verify</button>
+        </form>
+
+        <div>
+            <small>Didn't receive the code?</small> <br />
+                <span id="resendBtn" (click)="this.ngOnInit()"><small>Resend code again</small> </span><br />
+            </div>
+    </div>
+</div>

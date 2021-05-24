@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header">Confirm Booking</div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <td>Booking Id:</td>
+                <td> {{this.bookingData.id}}</td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td> {{this.name}}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{this.bookingData.uId}}</td>
+            </tr>
+            <tr>
+                <td>Phone no.:</td>
+                <td>{{this.mobileNum}}</td>
+            </tr>
+            <tr>
+                <td>From:</td>
+                <td>{{this.bookingData.bookedFrom}}</td>
+            </tr>
+            <tr>
+                <td>To:</td>
+                <td>{{this.bookingData.bookedTo}}</td>
+            </tr>
+            <tr>
+                <td>Total amount</td>
+                <td>{{this.totalAmount}}</td>
+            </tr>
+
+        </table>
+        <div class="row">
+            <button class="btn btn-success btn-md btn-block" (click)="completeBooking()">Pay</button>
+            <button class="btn btn-danger btn-md btn-block" (click)="cancelBooking()">Cancel</button>
+        </div>
+    </div>
+</div>

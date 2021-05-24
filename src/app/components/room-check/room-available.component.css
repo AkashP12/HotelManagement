@@ -1,0 +1,9 @@
+.bookBtn {
+    background: rgb(17, 196, 89);
+    background: linear-gradient( 114deg, rgba(17, 196, 89, 1) 0%, rgb(68 111 125) 0%, rgba(43, 77, 129, 1) 100%);
+    outline: rgb(40, 129, 175);
+    border: rgb(40, 129, 175);
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}

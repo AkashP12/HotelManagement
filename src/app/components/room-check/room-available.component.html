@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header">Available Rooms</div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Room No.</th>
+                    <th>Room Type</th>
+                    <th>Room Capacity</th>
+                    <th>Cost per day</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <div *ngIf="data; then show; else hide"></div>
+                <ng-template #show>
+                    <tr *ngFor="let item of data">
+                        <td>{{item.id}}</td>
+                        <td>{{item.roomType}}</td>
+                        <td>{{item.capacity}}</td>
+                        <td>{{item.cost}}</td>
+                        <td class="bookNow"> <button class="btn bookBtn btn-sm" (click)="bookNow(item)">Book</button>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template #hide>
+                    <tr>
+                        <th colspan="5" style="text-align: center">No rooms available for given filters. <a routerLink="/booking">change filters</a></th>
+                    </tr>
+                </ng-template>
+            </tbody>
+        </table>
+
+    </div>
+</div>

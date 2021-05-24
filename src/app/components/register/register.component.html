@@ -1,0 +1,122 @@
+<div class="card cardRegister">
+    <div class="card-header">Registration Form</div>
+    <div class="card-body">
+        <form #Registerform="ngForm" (ngSubmit)="registerUser()">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="exampleInputfirstname" name="firstname" required [(ngModel)]="user.firstName" #firstname="ngModel" [class.is-invalid]="firstname.invalid && firstname.touched" />
+                <small class="text-danger" [class.d-none]="firstname.valid || firstname.untouched">FirstName is required field</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputlastname"
+        name="lastname"
+        required
+        [(ngModel)]="user.lastName"
+        #lastname="ngModel"
+        [class.is-invalid]="lastname.invalid && lastname.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="lastname.valid || lastname.untouched"
+        >LastName is required field</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="phoneno">Phone Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputphoneno"
+        name="phoneno"
+        required
+        [(ngModel)]="user.mobileNum"
+        #mobileNumber="ngModel"
+        [class.is-invalid]="mobileNumber.invalid && mobileNumber.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="mobileNumber.valid || mobileNumber.untouched"
+        >Mobile Number is required field</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="Email1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name="email"
+        required
+        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        [(ngModel)]="user.email"
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+      />
+      <div *ngIf="email.errors && email.invalid && email.touched">
+        <small class="text-danger" *ngIf="email.errors.required"
+          >Email Id is required field</small
+        >
+        <small class="text-danger" *ngIf="email.errors.pattern"
+          >Enter the valid Email</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword"
+        name="password"
+        required
+        [(ngModel)]="user.password"
+        #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="password.valid || password.untouched"
+        >Password is required field</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="Password"> Confirm Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword"
+        name="cpassword"
+        required
+        (ngModel)="(user.password)"
+        #cpassword="ngModel"
+        [class.is-invalid]="cpassword.invalid && cpassword.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="
+          cpassword.value == password.value || cpassword.untouched
+        "
+        >Password & Confirm password must be same</small
+      >
+    </div>
+    <small class="text-danger">{{ msg }}</small
+    ><br />
+    <button
+      [disabled]="
+        Registerform.form.invalid || cpassword.value != password.value
+      "
+      type="submit"
+      class="btn btn-primary registerBtn"
+      name="create"
+    >
+      Sign up
+    </button>
+  </form>
+</div>
+</div>

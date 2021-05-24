@@ -1,0 +1,87 @@
+body {
+    position: relative;
+}
+
+.homeContainer {
+    position: relative;
+}
+
+.jContainer {
+    background-color: #ccc;
+    background-image: url('https://media.radissonhotels.net/image/radisson-blu-brand/promotional/16256-116722-f64240659_3xl.jpg?impolicy=SecondGalleryImg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.display-4 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.my-4 {
+    color: #fff;
+    height: 2px;
+}
+
+.lead {
+    color: #fff;
+}
+
+.placeToGo {
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    padding: 20px 20px 20px 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    transition: .5s;
+    box-sizing: border-box;
+}
+
+.placeToGo:hover {
+    background-color: rgb(177, 159, 159);
+    color: white;
+}
+
+.placeToGo h3 {
+    font-size: 1.8em;
+}
+
+.placeToGo p {
+    font-size: 1.1em;
+    font-weight: 100;
+}
+
+#travelSection h2 {
+    font-weight: 100;
+    font-size: 2em;
+    border-bottom: 1px solid #cccccc;
+    margin-top: 0%;
+    margin-left: 3%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#travelSection {
+    position: absolute;
+    margin-bottom: 100px;
+}
+
+.footer {
+    padding: 3%;
+    display: block;
+    height: 4%;
+    position: fixed;
+    color: #fff;
+    margin-top: 20px;
+    background-color: #000;
+    left: 0;
+    bottom: 0;
+    height: 2.5rem;
+}
+
+.text {
+    color: #fff;
+}

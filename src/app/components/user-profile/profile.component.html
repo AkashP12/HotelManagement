@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">Welcome {{ data.firstName }} {{ data.lastName }}</div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <td>Name:</td>
+                <td>{{ data.firstName }} {{ data.lastName }}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{ data.email }}</td>
+            </tr>
+            <tr>
+                <td>Phone no.:</td>
+                <td>{{ data.mobileNum }}</td>
+            </tr>
+            <tr>
+                <td>Aadhaar no.:</td>
+                <td>{{ data.aadhar }}</td>
+            </tr>
+            <tr>
+                <td>Wallet:</td>
+                <td>
+                    <span>Rs. {{ data.wallet }}</span>
+                    <a routerLink="/addMoney">add money to Wallet</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Bookings:</td>
+                <td>
+                    <a routerLink="/myBooking">go to your bookings</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100vh;
+    scroll-behavior: smooth;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.card-header {
+    background-color: #53a8df;
+    font-size: 16px;
+    color: honeydew;
+    font-weight: 500;
+}
+
+.card-body {
+    background-color: #dee0e2;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    --bs-table-accent-bg: rgb(15 80 148 / 25%);
+    color: #000000;
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: #587087;
+    border-color: #8193a5;
+}

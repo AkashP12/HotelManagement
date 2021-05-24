@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top classic">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">{{ title }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"> </span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link navTab" routerLink="/">Home
+          <span class="sr-only">(current) </span>
+        </a>
+                </li>
+                <li [hidden]="!loggedIn" class="nav-item">
+                    <a class="nav-link navTab" routerLink="/booking">Booking</a>
+                </li>
+                <li [hidden]="adminLoggedIn" class="nav-item">
+                    <a class="nav-link navTab" routerLink="/about">About</a>
+                </li>
+                <li [hidden]="loggedIn || adminLoggedIn" class="nav-item">
+                    <a class="nav-link navTab" routerLink="/login">Login</a>
+                </li>
+                <li [hidden]="loggedIn || adminLoggedIn" class="nav-item">
+                    <a class="nav-link navTab" routerLink="/register">Register</a>
+                </li>
+                <li [hidden]="!loggedIn || adminLoggedIn" class="nav-item">
+                    <a class="nav-link navTab" routerLink="/profile">Profile</a>
+                </li>
+            </ul>
+            <span [hidden]="!loggedIn && !adminLoggedIn" class="navbar-text">
+            <button (click)="logout()" type="button" class="btn btn-danger btn-sm">Log out</button>
+          </span>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid mainContainer">
+    <router-outlet *ngIf="!adminLoggedIn"></router-outlet>
+    <app-admin-ops *ngIf="adminLoggedIn"></app-admin-ops>
+</div>

@@ -1,0 +1,4 @@
+.table-bordered td,
+.table-bordered th {
+    border: 6px solid #a1a9b1;
+}

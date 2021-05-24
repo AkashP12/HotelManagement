@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-header">My Bookings</div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Booking Id</th>
+                    <th>Room No.</th>
+                    <th>Name</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <div *ngIf="userBookings.length !=0; then show; else hide"></div>
+                <ng-template #show>
+                    <tr *ngFor="let booking of userBookings">
+                        <td>{{ booking.id }}</td>
+                        <td>{{ booking.rId }}</td>
+                        <td>{{ data.firstName + " " + data.lastName }}</td>
+                        <td>{{ booking.bookedFrom }}</td>
+                        <td>{{ booking.bookedTo }}</td>
+                        <td>{{ booking.costPerDay * booking.bookedDays }}</td>
+                        <td>{{ booking.bookingStatus }}</td>
+                        <td>
+                            <button [disabled]="!booking.delStatus" class="btn btn-warning btn-sm" (click)="cancelBooking(booking.id)">
+                                  Cancel
+                                </button>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template #hide>
+                    <tr>
+                        <th colspan="8" style="text-align: center">You have no bookings. <a routerLink="/booking">Book Now</a></th>
+                    </tr>
+                </ng-template>
+                <tr>
+                    <td colspan="8" style="text-align: center"><i>Note: </i>Cancellation is allowed only for upcoming bookings!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

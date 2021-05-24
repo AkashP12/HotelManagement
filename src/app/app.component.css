@@ -1,0 +1,23 @@
+    .mainContainer {
+        padding: 1% 10%;
+        background-color: #c5c5d3;
+        min-height: calc(100vh - 52px);
+    }
+    
+    .classic {
+        background: rgb(20, 14, 120);
+        background: linear-gradient(90deg, rgba(20, 14, 120, 1) 0%, rgb(135 135 185) 81%, rgb(66 140 154) 100%);
+    }
+    
+    .navTab {
+        background-color: transparent;
+        border-radius: 5px;
+        margin: 0 8px;
+        font-weight: 500 !important;
+        font-size: 16px;
+        color: #fff !important;
+    }
+    
+    .nav-pills .nav-link.active {
+        background-color: bisque !important;
+    }

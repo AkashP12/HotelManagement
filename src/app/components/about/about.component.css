@@ -1,0 +1,61 @@
+body {
+    position: relative;
+}
+
+.placeToGo {
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    padding: 20px 20px 20px 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    transition: .5s;
+    box-sizing: border-box;
+}
+
+.placeToGo:hover {
+    background-color: rgb(177, 159, 159);
+    color: white;
+}
+
+.placeToGo h3 {
+    font-size: 1.8em;
+}
+
+.placeToGo p {
+    font-size: 1.1em;
+    font-weight: 100;
+}
+
+#travelSection h2 {
+    font-weight: 100;
+    font-size: 2em;
+    border-bottom: 1px solid #cccccc;
+    margin-top: 0%;
+    margin-left: 3%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#travelSection {
+    background-color: #f3eaea;
+    position: absolute;
+    margin-bottom: 100px;
+}
+
+.footer {
+    padding: 3%;
+    display: block;
+    color: #fff;
+    margin-top: 20px;
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 2.5rem;
+}
+
+.text {
+    color: #fff;
+}

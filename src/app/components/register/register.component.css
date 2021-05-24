@@ -1,0 +1,11 @@
+.cardRegister {
+    width: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.registerBtn {
+    background-color: rgb(196 60 94);
+    ;
+    width: 100%;
+}
